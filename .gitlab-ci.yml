@@ -20,7 +20,7 @@ test:
     - docker:dind
   script:
     - docker images
-    - docker run $CI_REGISTRY_IMAGE
+    - docker run registry.gitlab.com/dev1182741/todo
     - docker images
 pages:
   stage: deploy
