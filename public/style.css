@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;500&family=Roboto:wght@300;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: white;
-    font-family: 'Epilogue',sans-serif;
+    font-family: 'Epilogue', sans-serif;
 }
 
 
@@ -14,15 +16,17 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
 .container {
     width: 50%;
     margin: 0 auto;
     padding: 5rem;
     background-color: white;
 }
-.text-center{
+
+.text-center {
     padding-bottom: 2rem;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-group {
@@ -52,19 +56,23 @@ label {
     cursor: pointer;
     font-size: 16px;
 }
+
 .btn:hover {
     background-color: #555843;
     color: white;
 }
-#items{
+
+#items {
     margin-top: 3rem;
 }
+
 table {
     width: 100%;
     margin-top: 2rem;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
 }
@@ -82,6 +90,7 @@ th {
     color: #fff;
     margin-right: 5px;
 }
+
 .btn-edit:hover {
     background-color: #0056b3;
 }
@@ -263,7 +272,7 @@ li {
 
 #editPopup button:hover {
     background-color: #555843;
-    color:white
+    color: white
 }
 
 #editPopup #closePopup {
@@ -277,20 +286,3 @@ li {
     outline: none;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
