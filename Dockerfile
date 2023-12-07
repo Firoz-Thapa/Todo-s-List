@@ -22,8 +22,6 @@ COPY package*.json .
 
 # Install the dependencies for your application using npm
 RUN npm install
-RUN apt-get -y update && apt-get -y install nginx
-COPY . /etc/nginx/sites-available/default
 # Copy the application files from the local machine to the container
 COPY . .
 # Set the environment variable for the port
@@ -32,4 +30,4 @@ ENV PORT 3000
 # Expose the port
 EXPOSE $PORT
 # Start the application when the container starts
-CMD ["npm", "test","/usr/sbin/nginx", "-g", "daemon off;"] 
+CMD ["npm", "test"] 
