@@ -13,7 +13,7 @@ build:
     # - echo $CI_REGISTRY_IMAGE
     # - docker pull registry.gitlab.com/tin280/todolist
     - docker images
-    - docker build -t test
+    - docker build -t test .
 test:
   stage: test
   image: docker
