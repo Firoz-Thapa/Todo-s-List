@@ -12,11 +12,10 @@ RUN apt-get install -y nodejs
 
 RUN apt-get install -y libcairo2 libcairo-gobject2 libxt6 libsm6 libice6 libgtk-3-0 libx11-xcb1 libdbus-glib-1-2 psmisc xvfb libappindicator1 libasound2 libatk1.0-0 libatk-bridge2.0-0 libcairo-gobject2 libgconf-2-4 libgtk-3-0 libice6 libnspr4 libnss3 libsm6 libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxrandr2 libxss1 libxt6 libxtst6 fonts-liberation
 # Install Firefox
-RUN apt-get update && apt-get install -y firefox
+RUN apt-get install -y firefox
 
 # Set the working directory to /app
 WORKDIR /app
-
 # Copy the package.json file from the local machine to the container
 COPY package*.json .
 
@@ -30,4 +29,4 @@ ENV PORT 3000
 # Expose the port
 EXPOSE $PORT
 # Start the application when the container starts
-CMD ["npm", "test"] 
+CMD ["npm", "test"]

@@ -17,7 +17,7 @@
         },500000);
 
         test("Can add Todo's list", async () => {
-            await driver.get("https://todo-dev1182741-4e3c827bbc90e83380ca8ec123226786ba5921104f9ab7b.gitlab.io/");
+            await driver.get("http://127.0.0.1:3000/public/");
             const titleElement = await driver.findElement(By.id("title"));
             await titleElement.clear();
             await titleElement.sendKeys("This is a new title");
