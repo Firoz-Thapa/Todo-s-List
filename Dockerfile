@@ -21,6 +21,7 @@ COPY package*.json .
 
 # Install the dependencies for your application using npm
 RUN npm install
+RUN npm install -g live-server
 # Copy the application files from the local machine to the container
 COPY . .
 # Set the environment variable for the port
