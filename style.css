@@ -36,15 +36,18 @@ label {
     cursor: pointer;
     font-size: 16px;
 }
+
 .btn:hover {
     background-color: black;
     color: white;
 }
+
 table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
 }
@@ -62,19 +65,7 @@ th {
     color: #fff;
     margin-right: 5px;
 }
+
 .btn-edit:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
