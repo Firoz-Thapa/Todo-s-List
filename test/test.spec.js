@@ -32,9 +32,6 @@
         test("Clear list", async () => {
             await driver.findElement(By.id("clear")).click();
             await waitSeconds(0.5)
-            const alert = await driver.switchTo().alert();
-            
-            await alert.accept();
             await driver.findElement(By.id("confirmClear")).click();
             const tableBodyElement = await driver.findElement(By.id('tableBody'));
             const rows = await tableBodyElement.findElements(By.tagName('tr'));
