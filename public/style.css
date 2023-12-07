@@ -181,6 +181,104 @@ li {
     display: none;
 }
 
+#popup {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Arial", sans-serif;
+    display: none;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#popup button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #A7D397;
+    color: #090909;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#popup button:hover {
+    background-color: #555843;
+    color: white
+}
+
+#popup #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#editPopup {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Arial", sans-serif;
+    display: none;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#editPopup input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#editPopup button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #A7D397;
+    color: #090909;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#editPopup button:hover {
+    background-color: #555843;
+    color:white
+}
+
+#editPopup #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
 
 
 
