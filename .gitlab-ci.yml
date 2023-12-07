@@ -11,7 +11,7 @@ build:
   script:
     - docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password=$CI_REGISTRY_PASSWORD
     - echo $CI_REGISTRY_IMAGE
-    - docker pull registry.gitlab.com/dev1182741/todo
+    - docker pull registry.gitlab.com/tin280/todolist
     - docker images
 test:
   stage: test
@@ -20,7 +20,7 @@ test:
     - docker:dind
   script:
     - docker images
-    - docker run registry.gitlab.com/dev1182741/todo
+    - docker run registry.gitlab.com/tin280/todolist
     - docker images
 pages:
   stage: deploy
