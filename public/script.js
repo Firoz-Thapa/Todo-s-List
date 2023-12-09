@@ -2,10 +2,14 @@ function getAndUpdate(){
     console.log("Updating List...");
     tit = document.getElementById('title').value;
     desc = document.getElementById('description').value;
-    priority = document.getElementById('priority').value;
-
     document.getElementById('title').value = "";
+    priority = document.getElementById('priority').value;
     document.getElementById('description').value = "";
+
+    if (tit.trim() !== "" && desc.trim() !== "") {
+        document.getElementById('title').value = "";
+        document.getElementById('description').value = "";
+
 
     if (localStorage.getItem('itemsJson')==null){
         itemJsonArray = [];
@@ -19,6 +23,19 @@ function getAndUpdate(){
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
     }
     update();
+}
+
+else {
+    let popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = "Both title and description are required to add a task.";
+
+    document.body.appendChild(popup);
+
+    setTimeout(function () {
+        document.body.removeChild(popup);
+    }, 3000);
+}
 }
 
 function update(){
@@ -86,25 +103,19 @@ function edit(itemIndex) {
 }
 
 function edit(itemIndex) {
-    // Show the edit pop-up
     document.getElementById("editPopup").style.display = "block";
 
-    // Set up the confirmEdit function with the itemIndex
     window.confirmEdit = function () {
         let newTitle = document.getElementById("newTitle").value;
         let newDescription = document.getElementById("newDescription").value;
-
-        // Call the edit function with the new data
+        if (newTitle.trim() !== "" && newDescription.trim() !== "") {
         editItem(itemIndex, newTitle, newDescription);
-
-        // Hide the edit pop-up
+        }
         closeEditPopup();
     };
 
-    // Set up the closeEditPopup function
     window.closeEditPopup = function () {
         document.getElementById("editPopup").style.display = "none";
-        // Remove the confirmEdit and closeEditPopup functions to avoid conflicts
         delete window.confirmEdit;
         delete window.closeEditPopup;
     };
@@ -127,7 +138,6 @@ function editItem(itemIndex, newTitle, newDescription) {
     update();
 }
 
-
 function openPopup() {
     document.getElementById("popup").style.display = "block";
 }
@@ -147,3 +157,4 @@ document.getElementById("confirmClear").addEventListener("click", function () {
     closePopup();
     
 });
+
