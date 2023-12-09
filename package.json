@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "live-server & jest"
+    "test": "live-server ./public --port=3000 & jest"
   },
   "author": "",
   "license": "ISC",
