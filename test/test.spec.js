@@ -17,21 +17,21 @@
         },500000);
 
         test("Can add Todo's list", async () => {
-            await driver.get("http://127.0.0.1:3000/public/");
+            await driver.get("http://127.0.0.1:3000");
             const titleElement = await driver.findElement(By.id("title"));
             await titleElement.clear();
             await titleElement.sendKeys("This is a new title");
-            await waitSeconds(0.5)
+            await waitSeconds(0.2)
             const description = await driver.findElement(By.id("description"));
             await description.clear();
             await description.sendKeys("Test");
-            await waitSeconds(0.5)
+            await waitSeconds(0.2)
             await driver.findElement(By.id("add")).click();
             await waitSeconds(3);
         },500000);
         test("Clear list", async () => {
             await driver.findElement(By.id("clear")).click();
-            await waitSeconds(0.5)
+            await waitSeconds(0.2)
             await driver.findElement(By.id("confirmClear")).click();
             const tableBodyElement = await driver.findElement(By.id('tableBody'));
             const rows = await tableBodyElement.findElements(By.tagName('tr'));
@@ -40,8 +40,18 @@
             } else {
                 console.error('Table body is not empty');
             }
-            await waitSeconds(0.5)
+            await waitSeconds(0.2)
             await waitSeconds(3);
         },500000)
-
+        test("If description and title no input not add blog",async () => {
+            await driver.findElement(By.id("add"))
+            await waitSeconds(0.1)
+            const tableBodyElement = await driver.findElement(By.id('tableBody'));
+            const rows = await tableBodyElement.findElements(By.tagName('tr'));
+            if (rows.length === 0) {
+                console.log('Test success');
+            } else {
+                console.error('Test fail');
+            }
+        })
     });
