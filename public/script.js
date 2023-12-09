@@ -78,6 +78,7 @@ function getColorByPriority(priority) {
     }
 }
 
+
 add = document.getElementById("add");
 add.addEventListener("click", getAndUpdate);
 update();
@@ -124,6 +125,7 @@ function edit(itemIndex) {
     document.getElementById('newDescription').value = "";
 
 }
+
 
 function editItem(itemIndex, newTitle, newDescription) {
     console.log("Edit", itemIndex, newTitle, newDescription);
