@@ -109,7 +109,7 @@ function edit(itemIndex) {
     window.confirmEdit = function () {
         let newTitle = document.getElementById("newTitle").value;
         let newDescription = document.getElementById("newDescription").value;
-        if (newTitle.trim() !== "" || newDescription.trim() !== "") {
+        if (newTitle.trim() !== "" && newDescription.trim() !== "") {
         editItem(itemIndex, newTitle, newDescription);
         }
         closeEditPopup();
