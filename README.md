@@ -13,7 +13,7 @@ The Todo application is a dynamic, user-friendly tool designed to help individua
 
 ## Repository Link
 
-Access our project repository here: [Todo Application - GitLab](https://tin280.gitlab.io/tryial)
+Access our project repository here: [Todo Application - GitLab](https://tin280.gitlab.io/todolist)
 
 ## Getting Started
 
