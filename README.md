@@ -2,7 +2,7 @@
 
 ## Project Description
 
-The Todo application is a dynamic, user-friendly tool designed to help individuals manage their daily tasks efficiently. It simplifies task management with features like task addition, completion status updates, and a visually appealing interface, enhancing productivity and user experience.
+The Todo application is a dynamic, user-friendly tool designed to help individuals manage their daily tasks efficiently. It simplifies task management with features like task addition, edit your tasks, make the priority list and delete the completed task.
 
 ## Developers
 
@@ -22,22 +22,24 @@ Access our project repository here: [Todo Application - GitLab](https://tin280.g
 -Docker
 -CI/CD
 
-- Node.js
-- A modern web browser
+-Node.js
 
 ### Installation
 
 Clone the repository and install dependencies:
 
 \```bash
-git clone https://gitlab.com/Tin280/todolist.git
-option 1
-cd todolist
-npm install
+git clone https://gitlab.com/Tin280/todolist.git .
 
-option 2
-Docker build -t todolist .
-Docker run todolist
+Option 1:
+
+1. `cd todolist`
+2. `npm install`
+
+Option 2:
+
+1. `Docker build -t todolist .`
+2. `Docker run todolist`
 
 \```
 
